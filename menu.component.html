@@ -1,0 +1,21 @@
+<header>
+ 
+<nav class="navbar navbar-expand-md navbar-blue bg-dark ">
+<div><a href="http://www.sysarcinfomatix.com" class="navbar-brand">SysArc Infomatix</a>
+
+</div>
+<ul class="navbar-nav">
+  <li><a *ngIf="authService.isUserLoggedIn()" routerLink="/welcome" class="nav-link">Home</a>  </li>
+  <li><a *ngIf="authService.isUserLoggedIn()" routerLink="/feedback" class="nav-link">Feedback Form</a>  </li>
+  <li><a *ngIf="authService.isUserLoggedIn()" routerLink="/conference" class="nav-link">Conference Room</a>  </li>
+  <li><a *ngIf="authService.isUserLoggedIn()" routerLink="/todos" class="nav-link">Todo</a>  </li>
+  <li><a *ngIf="authService.isUserLoggedIn()" routerLink="/login1" class="nav-link">login1</a>  </li>
+ 
+</ul>
+<ul class="navbar-nav navbar-collapse justify-content-end">
+  <li><a *ngIf="!authService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a>  </li>
+  <li><a *ngIf="authService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a>  </li>
+</ul>
+</nav>
+
+</header>
